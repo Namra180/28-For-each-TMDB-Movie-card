@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.movieCard{
+    height:300px;
+    overflow: hidden;
+}
+
+.movieCard img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.titleInfo{
+    position:absolute;
+    left: 0 ;
+    bottom:0;
+    color:white;
+    background-color:blueviolet;
+    width: 100%;
+    padding: 15px;
+}
+
+.titleInfo h2, .titleInfo h3 span{
+    font-size: 20px;
+}
+
+.titleInfo h2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.titleInfo h3 span{
+    display:inline-block;
+}
+
+.overview{
+    position:absolute;
+    background-color: white;
+    top: 30%;
+    left:0;
+    padding:15px;
+    width: 100%;
+    height:70%;
+    transform: scale(0);
+    transition: all 0.7s linear;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 1;
+}
+
+.movieCard:is(:hover, :focus, :active) .overview{
+    transform: scale(1);
+}
+
